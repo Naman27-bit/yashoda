@@ -297,7 +297,7 @@ if ask and question.strip():
             answer  = chain.invoke({"context": context, "question": question.strip()})
             answer  = str(answer).strip()
         except Exception as e:
-            answer = f"❌ Error: {e}"
+            answer = f" Error: {e}"
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
     st.rerun()
