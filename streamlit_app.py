@@ -219,10 +219,6 @@ with st.sidebar:
     st.markdown("1. Type your medicine question\n2. Click **Ask Yashoda**\n3. Get an informed answer")
     st.markdown("---")
 
-    st.markdown("### Models Used")
-    st.markdown(" **LLM**: `tinyllama`\n\n🔍 **Embeddings**: `nomic-embed-text`\n\n📦 **Vector DB**: Chroma")
-    st.markdown("---")
-
     if st.button("🗑️ Clear Chat"):
         st.session_state.messages = []
         st.rerun()
