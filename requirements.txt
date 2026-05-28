@@ -1,0 +1,9 @@
+langchain
+langchain-ollama
+langchain-chroma
+pandas
+vector
+gradio>=4.0.0
+tinyllama(ollama model)
+nomic-embed-text(embedding model)
+streamlit
