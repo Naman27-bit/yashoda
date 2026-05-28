@@ -176,7 +176,7 @@ section[data-testid="stSidebar"] .stTextInput label {
 </style>
 """, unsafe_allow_html=True)
 
-# ─── Model Setup ──────────────────────────────────────────────────────────────
+# Model Setup
 MODEL_NAME = "tinyllama"
 
 template = """
@@ -198,7 +198,7 @@ def load_chain():
 
 chain = load_chain()
 
-# ─── Session State ────────────────────────────────────────────────────────────
+# Session State 
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
@@ -232,7 +232,7 @@ with st.sidebar:
         unsafe_allow_html=True
     )
 
-# ─── Header ───────────────────────────────────────────────────────────────────
+# Header 
 st.markdown("""
 <div class="yashoda-header">
     <h1> Yashoda</h1>
@@ -240,7 +240,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ─── Sample Questions ─────────────────────────────────────────────────────────
+# Sample Questions 
 st.markdown("** Try asking:**")
 sample_cols = st.columns(3)
 samples = [
@@ -256,7 +256,7 @@ for col, sample in zip(sample_cols, samples):
 
 st.markdown("---")
 
-# ─── Chat History ─────────────────────────────────────────────────────────────
+# Chat History 
 chat_container = st.container()
 with chat_container:
     for msg in st.session_state.messages:
@@ -271,7 +271,7 @@ with chat_container:
                 unsafe_allow_html=True,
             )
 
-# ─── Input ────────────────────────────────────────────────────────────────────
+#  Input
 prefill = st.session_state.pop("prefill", "")
 
 with st.container():
@@ -287,7 +287,7 @@ with st.container():
     with col1:
         ask = st.button(" Ask Yashoda", use_container_width=True)
 
-# ─── Prediction ───────────────────────────────────────────────────────────────
+# Prediction 
 if ask and question.strip():
     st.session_state.messages.append({"role": "user", "content": question.strip()})
 
@@ -305,7 +305,7 @@ if ask and question.strip():
 elif ask and not question.strip():
     st.warning("Please enter a question first.")
 
-# ─── Disclaimer ───────────────────────────────────────────────────────────────
+# Disclaimer
 st.markdown("""
 <div class="disclaimer">
     ⚠️ <strong>Disclaimer:</strong> Yashoda provides general information only and is <strong>not</strong> a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider.
