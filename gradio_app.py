@@ -36,7 +36,7 @@ with gr.Blocks(title="Yashoda - Medical Assistant") as demo:
     gr.Markdown(
         "# Yashoda\n"
         "Medical assistant (powered by Ollama and LangChain)"
-        "\n Developed by Mr. Naman Kumar"
+        "Developed by Mr. Naman Kumar\n"
     )
 
     with gr.Row():
