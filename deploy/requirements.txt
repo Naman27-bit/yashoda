@@ -3,4 +3,3 @@ langchain-ollama
 langchain-chroma
 pandas
 gradio
-streamlit
