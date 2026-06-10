@@ -58,4 +58,3 @@ with gr.Blocks(title="Yashoda - Medical Assistant") as demo:
 
 if __name__ == "__main__":
     demo.launch(share=True)
-
