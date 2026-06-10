@@ -1,3 +1,9 @@
+---
+title: yashoda-chatbot
+app_file: gradio_app.py
+sdk: gradio
+sdk_version: 6.14.0
+---
 # Yashoda — Medicine Q&A (RAG) with Ollama + LangChain
 
 A small **retrieval-augmented generation (RAG)** medical assistant that answers questions about medicines using a local dataset (`medicine_dataset.csv`).
